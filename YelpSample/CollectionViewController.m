@@ -20,7 +20,7 @@ static NSString * const kBusinessPath      = @"/v2/business/";
 
 static NSString * const kSearchLimit       = @"10";
 
-@interface CollectionViewController ()
+@interface CollectionViewController () <UISearchBarDelegate>
 
 @property NSArray* businessModels;
 @property NSIndexPath* selectedIndex;
@@ -46,7 +46,7 @@ static NSString * const reuseIdentifier = @"CellD";
     
     // Do any additional setup after loading the view.
     
-    [self queryTopBusinessInfoForTerm:@"" location:@"toronto" completionHandler:^(NSArray *businesses, NSError *error) {
+    [self queryTopBusinessInfoForTerm:@"ethiopian" location:@"toronto" completionHandler:^(NSArray *businesses, NSError *error) {
         self.businessModels = [NSArray arrayWithArray:businesses];
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -167,7 +167,7 @@ static NSString * const reuseIdentifier = @"CellD";
  */
 - (NSURLRequest *)_searchRequestWithTerm:(NSString *)term location:(NSString *)location {
     NSDictionary *params = @{
-                             @"category_filter" : @"ethiopian",
+                             @"term" : term,
                              @"cc": @"CA",
                              @"location": location,
                              @"limit": kSearchLimit
@@ -207,6 +207,21 @@ static NSString * const reuseIdentifier = @"CellD";
 	
 }
  */
+
+#pragma mark -- search delegate
+
+-(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self queryTopBusinessInfoForTerm:searchBar.text
+                            location:@"toronto" completionHandler:^(NSArray *businesses, NSError *error) {
+        self.businessModels = [NSArray arrayWithArray:businesses];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // code here
+            [self.collectionView reloadData];
+        });
+    }];
+
+}
 
 
 @end

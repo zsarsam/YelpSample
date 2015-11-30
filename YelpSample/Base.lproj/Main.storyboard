@@ -58,6 +58,9 @@
                                 <rect key="frame" x="0.0" y="64" width="400" height="44"/>
                                 <animations/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pOb-Y6-Jxj" id="Uk3-sn-3eQ"/>
+                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeC-sF-U84">
                                 <rect key="frame" x="0.0" y="108" width="400" height="492"/>
