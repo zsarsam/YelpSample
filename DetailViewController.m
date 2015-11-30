@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "NSURLRequest+OAuth.h"
 #import "BusinessModel.h"
+#import "DetailBusinessModel.h"
+#import "UIImageView+AFNetworking.h"
 
 static NSString * const kAPIHost           = @"api.yelp.com";
 static NSString * const kSearchPath        = @"/v2/search/";
@@ -32,13 +34,18 @@ static NSString * const kBusinessPath      = @"/v2/business/";
 
 -(void) setBusinessModel:(BusinessModel*)model {
     // do something
-    [self queryTopBusinessInfoForTerm:model.businessID completionHandler:^(NSArray *businesses, NSError *error) {
-//        self.businessModels = [NSArray arrayWithArray:businesses];
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            // code here
-//            [self.collectionView reloadData];
-//        });
+    [self queryTopBusinessInfoForTerm:model.businessID completionHandler:^(DetailBusinessModel *model, NSError *error) {
+        
+       
+        dispatch_async(dispatch_get_main_queue(), ^{
+             // code here
+             self.name.text = model.name;
+            
+            [self.ratingImage setImageWithURL:[NSURL URLWithString:model.imageURL]];
+            self.ratingImage.contentMode = UIViewContentModeScaleAspectFit;
+         });
+        
+        
     }];
 
 }
@@ -46,7 +53,7 @@ static NSString * const kBusinessPath      = @"/v2/business/";
 
 #pragma mark Yelp Helper functions
 
-- (void)queryTopBusinessInfoForTerm:(NSString *)businessID completionHandler:(void (^)(NSArray *businesses, NSError *error))completionHandler {
+- (void)queryTopBusinessInfoForTerm:(NSString *)businessID completionHandler:(void (^)(DetailBusinessModel *model, NSError *error))completionHandler {
     
     
     //Make a first request to get the search results with the passed term and location
@@ -64,26 +71,19 @@ static NSString * const kBusinessPath      = @"/v2/business/";
             
             
             NSDictionary *searchResponseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            NSArray *businessArray = searchResponseJSON[@"businesses"];
+            DetailBusinessModel *model = [[DetailBusinessModel alloc] init];
             
-            if ([businessArray count] > 0) {
-                
-                NSMutableArray* businesses = [[NSMutableArray alloc] init];
-                
-//                for( NSDictionary* business in businessArray){
-//                    BusinessModel *model =  [[BusinessModel alloc] init];
-//                    model.name = business[@"name"];
-//                    model.businessID = business[@"id"];
-//                    model.imageURL = business[@"image_url"];
-//                    model.url = business[@"url"];
-//                    
-//                    [businesses addObject:model];
-//                }
-                completionHandler(businesses, nil);
-                
-            } else {
-                completionHandler(nil, error); // No business was found
-            }
+            model.name = searchResponseJSON[@"name"];
+            model.url = searchResponseJSON[@"mobile_url"];
+            model.reviewCount = searchResponseJSON[@"review_count"];
+            model.imageURL = searchResponseJSON[@"rating_img_url"];
+            model.phoneNumber = searchResponseJSON[@"phone"];
+            
+            // setting up the review model
+            model.reviews = [[ReviewModel alloc] init];
+            
+            completionHandler(model, error); // No business was found
+            
         } else {
             completionHandler(nil, error); // An error happened or the HTTP response is not a 200 OK
         }

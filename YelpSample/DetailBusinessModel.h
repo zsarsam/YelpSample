@@ -21,9 +21,8 @@
 @property (strong,nonatomic) NSString* phoneNumber;
 @property (strong,nonatomic) ReviewModel* reviews;
 @property (strong,nonatomic) NSString* reviewCount;
-@property (strong,nonatomic) NSString* snippetText;
-@property (strong,nonatomic) NSString* snippetImageUrl;
-
+@property (strong,nonatomic) NSString* closed;
+@property (strong,nonatomic) NSString* address;
 
 @end
 

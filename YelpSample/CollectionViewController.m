@@ -89,7 +89,7 @@ static NSString * const reuseIdentifier = @"CellD";
     BusinessModel* model = (BusinessModel*)self.businessModels[indexPath.row];
     cell.title.text = model.name ;
     [cell.imageView setImageWithURL:[NSURL URLWithString:model.imageURL]];
-    cell.title.backgroundColor = [UIColor greenColor];
+    cell.title.backgroundColor = [UIColor grayColor];
     
     return cell;
 }
@@ -169,6 +169,7 @@ static NSString * const reuseIdentifier = @"CellD";
     NSDictionary *params = @{
                              @"term" : term,
                              @"cc": @"CA",
+                             @"sort": @"2",
                              @"location": location,
                              @"limit": kSearchLimit
                              };
