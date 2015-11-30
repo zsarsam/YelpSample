@@ -45,7 +45,7 @@
         <!--search-->
         <scene sceneID="ucr-8i-rsd">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pOb-Y6-Jxj" customClass="CollectionViewController" sceneMemberID="viewController">
+                <viewController id="pOb-Y6-Jxj" customClass="CollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pjb-O4-oUI"/>
                         <viewControllerLayoutGuide type="bottom" id="8XX-aH-szZ"/>
@@ -54,8 +54,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="P4t-RT-54Q">
+                                <rect key="frame" x="0.0" y="64" width="400" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeC-sF-U84">
-                                <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                <rect key="frame" x="0.0" y="108" width="400" height="492"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kb4-7u-yXN">
@@ -117,10 +122,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eeC-sF-U84" firstAttribute="top" secondItem="pjb-O4-oUI" secondAttribute="bottom" id="0bc-R8-vf5"/>
-                            <constraint firstItem="eeC-sF-U84" firstAttribute="leading" secondItem="z9x-rV-GxR" secondAttribute="leading" id="7Xe-Qm-LUu"/>
-                            <constraint firstItem="eeC-sF-U84" firstAttribute="bottom" secondItem="8XX-aH-szZ" secondAttribute="top" id="S31-86-2Od"/>
-                            <constraint firstAttribute="trailing" secondItem="eeC-sF-U84" secondAttribute="trailing" id="W3a-au-b2H"/>
+                            <constraint firstAttribute="trailing" secondItem="eeC-sF-U84" secondAttribute="trailing" id="3gf-kZ-ChS"/>
+                            <constraint firstItem="eeC-sF-U84" firstAttribute="leading" secondItem="z9x-rV-GxR" secondAttribute="leading" id="4am-MC-EtY"/>
+                            <constraint firstItem="eeC-sF-U84" firstAttribute="top" secondItem="P4t-RT-54Q" secondAttribute="bottom" id="OpK-FV-QUk"/>
+                            <constraint firstItem="eeC-sF-U84" firstAttribute="bottom" secondItem="8XX-aH-szZ" secondAttribute="top" id="T1C-Un-4IQ"/>
+                            <constraint firstItem="P4t-RT-54Q" firstAttribute="leading" secondItem="eeC-sF-U84" secondAttribute="leading" id="meM-eJ-6yC"/>
+                            <constraint firstItem="P4t-RT-54Q" firstAttribute="top" secondItem="pjb-O4-oUI" secondAttribute="bottom" id="tm1-kU-DaC"/>
+                            <constraint firstItem="P4t-RT-54Q" firstAttribute="trailing" secondItem="eeC-sF-U84" secondAttribute="trailing" id="zNz-wZ-EcV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="search" id="MdE-xs-Tyo"/>
