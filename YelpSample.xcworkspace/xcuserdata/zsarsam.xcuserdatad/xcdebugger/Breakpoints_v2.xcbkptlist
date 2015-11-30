@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YelpSample/CollectionViewController.m"
-            timestampString = "470542171.468191"
+            filePath = "DetailViewController.m"
+            timestampString = "470552832.855198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-queryTopBusinessInfoForTerm:location:completionHandler:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-setBusinessModel:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YelpSample/CollectionViewController.m"
-            timestampString = "470542165.17685"
+            filePath = "DetailViewController.m"
+            timestampString = "470552861.275298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-queryTopBusinessInfoForTerm:location:completionHandler:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-queryTopBusinessInfoForTerm:completionHandler:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

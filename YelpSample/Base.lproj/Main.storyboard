@@ -64,7 +64,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="MDC-MK-gOT" id="lxn-zR-0Cn"/>
                                     <outlet property="title" destination="NHu-Z5-54S" id="sp8-Td-ORC"/>
-                                    <segue destination="mUx-cZ-rDS" kind="show" id="sse-Yl-en3"/>
+                                    <segue destination="mUx-cZ-rDS" kind="show" identifier="detailViewID" id="sse-Yl-en3"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="1093"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="dk8-6u-cIX">
             <objects>
-                <viewController id="mUx-cZ-rDS" sceneMemberID="viewController">
+                <viewController id="mUx-cZ-rDS" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7yS-H8-T0k"/>
                         <viewControllerLayoutGuide type="bottom" id="uMW-EQ-zMU"/>

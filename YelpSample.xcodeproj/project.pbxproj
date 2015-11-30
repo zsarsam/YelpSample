@@ -18,6 +18,9 @@
 		F176E3AA1C0BD11E00984A5A /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3A91C0BD11E00984A5A /* CollectionViewController.m */; };
 		F176E3AD1C0BD7E300984A5A /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3AC1C0BD7E300984A5A /* CollectionViewCell.m */; };
 		F176E3B01C0BE1B500984A5A /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3AF1C0BE1B500984A5A /* NSURLRequest+OAuth.m */; };
+		F176E3B31C0BEFFF00984A5A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3B21C0BEFFF00984A5A /* DetailViewController.m */; };
+		F176E3B61C0BF0C800984A5A /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3B51C0BF0C800984A5A /* BusinessModel.m */; };
+		F176E3B91C0C11B100984A5A /* DetailBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3B81C0C11B100984A5A /* DetailBusinessModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		F176E3AC1C0BD7E300984A5A /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		F176E3AE1C0BE1B500984A5A /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		F176E3AF1C0BE1B500984A5A /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
+		F176E3B11C0BEFFF00984A5A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ../DetailViewController.h; sourceTree = "<group>"; };
+		F176E3B21C0BEFFF00984A5A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ../DetailViewController.m; sourceTree = "<group>"; };
+		F176E3B41C0BF0C800984A5A /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessModel.h; path = ../BusinessModel.h; sourceTree = "<group>"; };
+		F176E3B51C0BF0C800984A5A /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessModel.m; path = ../BusinessModel.m; sourceTree = "<group>"; };
+		F176E3B71C0C11B100984A5A /* DetailBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBusinessModel.h; sourceTree = "<group>"; };
+		F176E3B81C0C11B100984A5A /* DetailBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBusinessModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +140,12 @@
 		F176E3711C0BC27D00984A5A /* YelpSample */ = {
 			isa = PBXGroup;
 			children = (
+				F176E3B71C0C11B100984A5A /* DetailBusinessModel.h */,
+				F176E3B81C0C11B100984A5A /* DetailBusinessModel.m */,
+				F176E3B41C0BF0C800984A5A /* BusinessModel.h */,
+				F176E3B51C0BF0C800984A5A /* BusinessModel.m */,
+				F176E3B11C0BEFFF00984A5A /* DetailViewController.h */,
+				F176E3B21C0BEFFF00984A5A /* DetailViewController.m */,
 				F176E3AE1C0BE1B500984A5A /* NSURLRequest+OAuth.h */,
 				F176E3AF1C0BE1B500984A5A /* NSURLRequest+OAuth.m */,
 				F176E3AB1C0BD7E300984A5A /* CollectionViewCell.h */,
@@ -355,11 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F176E3B91C0C11B100984A5A /* DetailBusinessModel.m in Sources */,
 				F176E3AA1C0BD11E00984A5A /* CollectionViewController.m in Sources */,
 				F176E3771C0BC27D00984A5A /* AppDelegate.m in Sources */,
 				F176E3AD1C0BD7E300984A5A /* CollectionViewCell.m in Sources */,
 				F176E3B01C0BE1B500984A5A /* NSURLRequest+OAuth.m in Sources */,
 				F176E3741C0BC27D00984A5A /* main.m in Sources */,
+				F176E3B61C0BF0C800984A5A /* BusinessModel.m in Sources */,
+				F176E3B31C0BEFFF00984A5A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,13 @@
 //
-//  CollectionViewCell.m
+//  BusinessModel.m
 //  YelpSample
 //
 //  Created by Zaid Sarsam on 11/29/15.
 //  Copyright © 2015 sarsam. All rights reserved.
 //
 
-#import "CollectionViewCell.h"
+#import "BusinessModel.h"
 
-@implementation CollectionViewCell
+@implementation BusinessModel
 
 @end
