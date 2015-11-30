@@ -11,12 +11,13 @@
 		F176E3741C0BC27D00984A5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3731C0BC27D00984A5A /* main.m */; };
 		F176E3771C0BC27D00984A5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3761C0BC27D00984A5A /* AppDelegate.m */; };
 		F176E37D1C0BC27D00984A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F176E37B1C0BC27D00984A5A /* Main.storyboard */; };
-		F176E3801C0BC27D00984A5A /* YelpSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F176E37E1C0BC27D00984A5A /* YelpSample.xcdatamodeld */; };
 		F176E3821C0BC27D00984A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F176E3811C0BC27D00984A5A /* Assets.xcassets */; };
 		F176E3851C0BC27D00984A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F176E3831C0BC27D00984A5A /* LaunchScreen.storyboard */; };
 		F176E3901C0BC27D00984A5A /* YelpSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E38F1C0BC27D00984A5A /* YelpSampleTests.m */; };
 		F176E39B1C0BC27D00984A5A /* YelpSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E39A1C0BC27D00984A5A /* YelpSampleUITests.m */; };
 		F176E3AA1C0BD11E00984A5A /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3A91C0BD11E00984A5A /* CollectionViewController.m */; };
+		F176E3AD1C0BD7E300984A5A /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3AC1C0BD7E300984A5A /* CollectionViewCell.m */; };
+		F176E3B01C0BE1B500984A5A /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3AF1C0BE1B500984A5A /* NSURLRequest+OAuth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		F176E3751C0BC27D00984A5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F176E3761C0BC27D00984A5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F176E37C1C0BC27D00984A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F176E37F1C0BC27D00984A5A /* YelpSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YelpSample.xcdatamodel; sourceTree = "<group>"; };
 		F176E3811C0BC27D00984A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F176E3841C0BC27D00984A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F176E3861C0BC27D00984A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +57,10 @@
 		F176E39C1C0BC27D00984A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F176E3A81C0BD11E00984A5A /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		F176E3A91C0BD11E00984A5A /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		F176E3AB1C0BD7E300984A5A /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		F176E3AC1C0BD7E300984A5A /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		F176E3AE1C0BE1B500984A5A /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
+		F176E3AF1C0BE1B500984A5A /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,10 @@
 		F176E3711C0BC27D00984A5A /* YelpSample */ = {
 			isa = PBXGroup;
 			children = (
+				F176E3AE1C0BE1B500984A5A /* NSURLRequest+OAuth.h */,
+				F176E3AF1C0BE1B500984A5A /* NSURLRequest+OAuth.m */,
+				F176E3AB1C0BD7E300984A5A /* CollectionViewCell.h */,
+				F176E3AC1C0BD7E300984A5A /* CollectionViewCell.m */,
 				F176E3A81C0BD11E00984A5A /* CollectionViewController.h */,
 				F176E3A91C0BD11E00984A5A /* CollectionViewController.m */,
 				F176E3751C0BC27D00984A5A /* AppDelegate.h */,
@@ -135,7 +143,6 @@
 				F176E3811C0BC27D00984A5A /* Assets.xcassets */,
 				F176E3831C0BC27D00984A5A /* LaunchScreen.storyboard */,
 				F176E3861C0BC27D00984A5A /* Info.plist */,
-				F176E37E1C0BC27D00984A5A /* YelpSample.xcdatamodeld */,
 				F176E3721C0BC27D00984A5A /* Supporting Files */,
 			);
 			path = YelpSample;
@@ -350,8 +357,9 @@
 			files = (
 				F176E3AA1C0BD11E00984A5A /* CollectionViewController.m in Sources */,
 				F176E3771C0BC27D00984A5A /* AppDelegate.m in Sources */,
+				F176E3AD1C0BD7E300984A5A /* CollectionViewCell.m in Sources */,
+				F176E3B01C0BE1B500984A5A /* NSURLRequest+OAuth.m in Sources */,
 				F176E3741C0BC27D00984A5A /* main.m in Sources */,
-				F176E3801C0BC27D00984A5A /* YelpSample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,19 +606,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F176E37E1C0BC27D00984A5A /* YelpSample.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F176E37F1C0BC27D00984A5A /* YelpSample.xcdatamodel */,
-			);
-			currentVersion = F176E37F1C0BC27D00984A5A /* YelpSample.xcdatamodel */;
-			path = YelpSample.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F176E3671C0BC27D00984A5A /* Project object */;
 }

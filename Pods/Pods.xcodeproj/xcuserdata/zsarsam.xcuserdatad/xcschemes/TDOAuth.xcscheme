@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9B10FBDF064F28B232A54DEA'
-               BlueprintName = 'Pods'
+               BlueprintIdentifier = 'E3C6976C07E7C6F57B4C00F1'
+               BlueprintName = 'TDOAuth'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods.a'>
+               BuildableName = 'libTDOAuth.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
