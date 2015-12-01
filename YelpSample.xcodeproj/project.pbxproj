@@ -21,6 +21,7 @@
 		F176E3B31C0BEFFF00984A5A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3B21C0BEFFF00984A5A /* DetailViewController.m */; };
 		F176E3B61C0BF0C800984A5A /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3B51C0BF0C800984A5A /* BusinessModel.m */; };
 		F176E3B91C0C11B100984A5A /* DetailBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F176E3B81C0C11B100984A5A /* DetailBusinessModel.m */; };
+		F1F29A731C0D560100118796 /* YelpApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F29A721C0D560100118796 /* YelpApiManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		F176E3B51C0BF0C800984A5A /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessModel.m; path = ../BusinessModel.m; sourceTree = "<group>"; };
 		F176E3B71C0C11B100984A5A /* DetailBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBusinessModel.h; sourceTree = "<group>"; };
 		F176E3B81C0C11B100984A5A /* DetailBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBusinessModel.m; sourceTree = "<group>"; };
+		F1F29A711C0D560100118796 /* YelpApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpApiManager.h; sourceTree = "<group>"; };
+		F1F29A721C0D560100118796 /* YelpApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpApiManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 		F176E3711C0BC27D00984A5A /* YelpSample */ = {
 			isa = PBXGroup;
 			children = (
+				F1F29A711C0D560100118796 /* YelpApiManager.h */,
+				F1F29A721C0D560100118796 /* YelpApiManager.m */,
 				F176E3B71C0C11B100984A5A /* DetailBusinessModel.h */,
 				F176E3B81C0C11B100984A5A /* DetailBusinessModel.m */,
 				F176E3B41C0BF0C800984A5A /* BusinessModel.h */,
@@ -378,6 +383,7 @@
 				F176E3741C0BC27D00984A5A /* main.m in Sources */,
 				F176E3B61C0BF0C800984A5A /* BusinessModel.m in Sources */,
 				F176E3B31C0BEFFF00984A5A /* DetailViewController.m in Sources */,
+				F1F29A731C0D560100118796 /* YelpApiManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

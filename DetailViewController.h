@@ -15,9 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *website;
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UIImageView *ratingImage;
-
 @property (strong, nonatomic) IBOutlet UILabel *reviewCounts;
-@property (strong, nonatomic) IBOutlet UILabel *status;
 @property (strong, nonatomic) IBOutlet UIImageView *userImage;
 @property (strong, nonatomic) IBOutlet UILabel *userName;
 @property (strong, nonatomic) IBOutlet UIImageView *userRatingImage;
