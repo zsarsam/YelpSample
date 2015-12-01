@@ -219,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="1055" y="1959"/>
         </scene>
-        <!--search-->
+        <!--Yelp Search-->
         <scene sceneID="ucr-8i-rsd">
             <objects>
                 <viewController id="pOb-Y6-Jxj" customClass="CollectionViewController" sceneMemberID="viewController">
@@ -312,7 +312,7 @@
                             <constraint firstItem="P4t-RT-54Q" firstAttribute="top" secondItem="pjb-O4-oUI" secondAttribute="bottom" id="tm1-kU-DaC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="search" id="MdE-xs-Tyo"/>
+                    <navigationItem key="navigationItem" title="Yelp Search" id="MdE-xs-Tyo"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
