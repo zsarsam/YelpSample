@@ -12,7 +12,11 @@
 
 @property (strong,nonatomic) NSString* excerpt;
 @property (strong,nonatomic) NSString* rating;
-@property (strong,nonatomic) NSString* ratingImage;
+@property (strong,nonatomic) NSString* user;
+@property (strong,nonatomic) NSString* userImage;
+@property (strong,nonatomic) NSString* userRatingImage;
+@property (strong,nonatomic) NSString* timeCreated;
+
 
 @end
 
@@ -21,7 +25,6 @@
 @property (strong,nonatomic) NSString* phoneNumber;
 @property (strong,nonatomic) ReviewModel* reviews;
 @property (strong,nonatomic) NSString* reviewCount;
-@property (strong,nonatomic) NSString* closed;
 @property (strong,nonatomic) NSString* address;
 
 @end

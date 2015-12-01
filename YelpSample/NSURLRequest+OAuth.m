@@ -14,7 +14,7 @@
  OAuth credential placeholders that must be filled by each user in regards to
  http://www.yelp.com/developers/getting_started/api_access
  */
-#warning Fill in the API keys below with your developer v2 keys.
+
 static NSString * const kConsumerKey       = @"wthDfjKCzqdTd0Zkd3eTlA";
 static NSString * const kConsumerSecret    = @"xJOKk5vJZsr-qttp_XDU3D_EU1I";
 static NSString * const kToken             = @"AcCWG2jUgjKSH0k7jVkm0bMX2_9GnYTc";

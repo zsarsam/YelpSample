@@ -18,18 +18,16 @@ static NSString * const kBusinessPath      = @"/v2/business/";
 
 @interface DetailViewController ()
 
+@property (strong, nonatomic) DetailBusinessModel *currentModel;
 @end
 
 @implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.website.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) setBusinessModel:(BusinessModel*)model {
@@ -39,10 +37,32 @@ static NSString * const kBusinessPath      = @"/v2/business/";
        
         dispatch_async(dispatch_get_main_queue(), ^{
              // code here
-             self.name.text = model.name;
+            
+            self.currentModel = model;
+            self.name.text = model.name;
             
             [self.ratingImage setImageWithURL:[NSURL URLWithString:model.imageURL]];
             self.ratingImage.contentMode = UIViewContentModeScaleAspectFit;
+            self.reviewCounts.text = [NSString stringWithFormat:@"%@ reviews",model.reviewCount];
+            
+            [self.userImage setImageWithURL:[NSURL URLWithString:model.reviews.userImage]];
+            self.userImage.contentMode = UIViewContentModeScaleAspectFit;
+            self.userName.text = model.reviews.user;
+            [self.userRatingImage setImageWithURL:[NSURL URLWithString:model.reviews.userRatingImage]];
+            self.userRatingImage.contentMode = UIViewContentModeScaleAspectFit;
+            
+            NSDate *date = [NSDate dateWithTimeIntervalSince1970:[model.reviews.timeCreated integerValue]];
+            
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"yyyy-mm-dd "];
+            
+            NSString *dateString = [formatter stringFromDate:date];
+            self.date.text = dateString;
+            
+            self.review.text = model.reviews.excerpt;
+            [self.review sizeToFit];
+            
+            self.address.text = model.address ;
          });
         
         
@@ -68,8 +88,6 @@ static NSString * const kBusinessPath      = @"/v2/business/";
         
         if (!error && httpResponse.statusCode == 200) {
             
-            
-            
             NSDictionary *searchResponseJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
             DetailBusinessModel *model = [[DetailBusinessModel alloc] init];
             
@@ -78,9 +96,24 @@ static NSString * const kBusinessPath      = @"/v2/business/";
             model.reviewCount = searchResponseJSON[@"review_count"];
             model.imageURL = searchResponseJSON[@"rating_img_url"];
             model.phoneNumber = searchResponseJSON[@"phone"];
+            NSDictionary *locations = searchResponseJSON[@"location"];
+            NSArray* addressArray = locations[@"display_address"];
+            model.address = [[addressArray valueForKey:@"description"] componentsJoinedByString:@" "];
             
             // setting up the review model
             model.reviews = [[ReviewModel alloc] init];
+            
+            NSArray* reviewsArray = searchResponseJSON[@"reviews"];
+            NSDictionary *reviewsJSON = reviewsArray[0];
+            model.reviews.excerpt = reviewsJSON[@"excerpt"];
+            model.reviews.rating = reviewsJSON[@"rating"];
+            model.reviews.userRatingImage =  reviewsJSON[@"rating_image_url"];
+            model.reviews.timeCreated = reviewsJSON[@"time_created"];
+            
+            NSDictionary *user = reviewsJSON[@"user"];
+            model.reviews.user = user[@"name"];
+            model.reviews.userImage = user[@"image_url"];
+           
             
             completionHandler(model, error); // No business was found
             
@@ -103,14 +136,10 @@ static NSString * const kBusinessPath      = @"/v2/business/";
     return [NSURLRequest requestWithHost:kAPIHost path:businessPath];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)openWebsite:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.currentModel.url]];
 }
-*/
+- (IBAction)openAddress:(id)sender {
+}
 
 @end
